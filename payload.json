@@ -1,0 +1,9 @@
+{
+    "source": "github",
+    "repo": "test-repo",
+    "pipelineId": "123",
+    "content": "Build started... Build failed.",
+    "metadata": {
+        "author": "dev"
+    }
+}

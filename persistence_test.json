@@ -1,0 +1,7 @@
+{
+    "content": "Deploying update...\nDB_PASSWORD=secret123\nSuccess.",
+    "metadata": {
+        "source": "persistence_test",
+        "user": "admin"
+    }
+}

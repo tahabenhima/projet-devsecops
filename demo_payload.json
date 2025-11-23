@@ -1,0 +1,6 @@
+{
+    "content": "Pipeline started.\nAWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE\nError: Database connection failed\nVisit https://docs.example.com for help.",
+    "metadata": {
+        "source": "manual_test"
+    }
+}

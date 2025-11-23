@@ -1,0 +1,6 @@
+{
+    "content": "Build started.\nDeploying to production...\nexport AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE\nError: Connection failed\nCheck https://example.com/docs for more info.",
+    "metadata": {
+        "jobId": "job-123"
+    }
+}
