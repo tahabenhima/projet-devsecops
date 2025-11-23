@@ -1,0 +1,7 @@
+{
+    "content": "Pipeline execution started\nDEPLOY_TOKEN=ghp_1234567890abcdefghijklmnopqrstuvwx\nFatal error: Database migration failed\nCheck https://example.com/troubleshooting",
+    "metadata": {
+        "test": "integration",
+        "service": "log-parser"
+    }
+}

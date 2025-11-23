@@ -5,7 +5,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - ./data/db:/data/db
+      - mongodb_data:/data/db
     restart: always
 
   log-parser:
@@ -16,4 +16,8 @@ services:
       - MONGODB_URI=mongodb://mongodb:27017/safeops-logminer
     depends_on:
       - mongodb
+
+volumes:
+  mongodb_data:
+
 

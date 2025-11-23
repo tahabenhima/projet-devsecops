@@ -1,0 +1,10 @@
+{
+    "source": "github",
+    "repo": "test-integration",
+    "pipelineId": "pipeline-001",
+    "content": "Build started\nAPI_KEY=AKIAIOSFODNN7EXAMPLE\nError: Connection timeout\nVisit https://docs.github.com for help\nBuild completed",
+    "metadata": {
+        "author": "integration-test",
+        "branch": "main"
+    }
+}
