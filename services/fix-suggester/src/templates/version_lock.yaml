@@ -1,0 +1,12 @@
+# Version Lock Template
+# This template pins GitHub Actions to specific commit SHAs
+
+{%- for action in actions %}
+# Pin {{ action.name }} to commit SHA
+uses: {{ action.repo }}@{{ action.sha }} # {{ action.version }}
+{%- endfor %}
+
+# Benefits:
+# - Prevents supply chain attacks
+# - Ensures reproducibility
+# - Allows verification of action code

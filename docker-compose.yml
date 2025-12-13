@@ -26,6 +26,15 @@ services:
     depends_on:
       - postgres
 
+  fix-suggester:
+    build: ./services/fix-suggester
+    ports:
+      - "8002:8000"
+    environment:
+      - DATABASE_URL=postgresql://user:password@postgres:5432/vulndetector
+    depends_on:
+      - postgres
+
   postgres:
     image: postgres:15
     environment:
