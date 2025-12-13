@@ -1,0 +1,17 @@
+# Permission Restriction Template
+# Minimal required permissions following least privilege principle
+
+permissions:
+  # Read access to repository contents
+  contents: read
+  
+  # Write access to pull requests (for comments, reviews)
+  pull-requests: write
+  
+  # Uncomment if needed:
+  # issues: write
+  # checks: write
+  # deployments: write
+  # packages: write
+
+# Note: Restrict permissions to only what's necessary for the workflow

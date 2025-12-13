@@ -1,0 +1,23 @@
+{
+  "workflow_yaml": "name: CI Pipeline\non:\n  push:\n    branches: [main]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@main\n      - uses: actions/setup-node@v4\n      - name: Install dependencies\n        run: npm install\n      - name: Run tests\n        env:\n          API_KEY: hardcoded_secret_123\n        run: npm test",
+  "vulnerabilities": [
+    {
+      "type": "unpinned_action",
+      "line": 7,
+      "details": "Action uses @main tag instead of pinned SHA"
+    },
+    {
+      "type": "excessive_permissions",
+      "details": "Workflow has no permissions defined"
+    },
+    {
+      "type": "hardcoded_secret",
+      "line": 13,
+      "details": "Hardcoded API key detected"
+    },
+    {
+      "type": "weak_hardening",
+      "details": "Missing concurrency control and timeouts"
+    }
+  ]
+}

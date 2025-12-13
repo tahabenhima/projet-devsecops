@@ -1,0 +1,29 @@
+# Hardening Template
+# Security best practices for GitHub Actions workflows
+
+# Concurrency control - prevents parallel runs of the same workflow
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    
+    # Job timeout prevents infinite loops and resource exhaustion
+    timeout-minutes: 30
+    
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      
+      # Add conditions to prevent running on forks
+      - name: Protected step
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: echo "Running protected step"
+
+# Additional hardening recommendations:
+# - Use environment protection rules
+# - Enable branch protection
+# - Require reviews for workflow changes
+# - Use artifact retention policies
+# - Enable dependency scanning
